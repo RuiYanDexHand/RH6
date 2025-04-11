@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ruihand6z">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00261509912067082 -0.00202384901005411 0.0609899196930254"
+        rpy="0 0 0" />
+      <mass
+        value="0.144625530976132" />
+      <inertia
+        ixx="0.000133309599124317"
+        ixy="-1.82145713429529E-07"
+        ixz="3.32894452619656E-06"
+        iyy="8.49751509488818E-05"
+        iyz="1.7292812695271E-06"
+        izz="6.01735771930698E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fz11_Link">
+    <inertial>
+      <origin
+        xyz="-0.00636137464373584 1.32504361038954E-07 0.00938049379418998"
+        rpy="0 0 0" />
+      <mass
+        value="0.0118860026879453" />
+      <inertia
+        ixx="7.74702988388344E-07"
+        ixy="9.44838007032962E-12"
+        ixz="-1.45349151739363E-07"
+        iyy="1.06344992792549E-06"
+        iyz="7.07126022924055E-12"
+        izz="1.01259075358287E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz11"
+    type="revolute">
+    <origin
+      xyz="0.0135 -0.022 0.0398"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fz11_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="2.356"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz12_Link">
+    <inertial>
+      <origin
+        xyz="-0.0171306596068069 0.00371895991913085 4.99658495023425E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0125497959689692" />
+      <inertia
+        ixx="8.09093816336842E-07"
+        ixy="5.16426686845547E-07"
+        ixz="2.07629546130886E-10"
+        iyy="2.83181034231341E-06"
+        iyz="1.04480554936718E-11"
+        izz="2.66845480195757E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz12_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz12_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz12"
+    type="revolute">
+    <origin
+      xyz="-0.0105 0 0.0107"
+      rpy="1.5708 0 0" />
+    <parent
+      link="fz11_Link" />
+    <child
+      link="fz12_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.698"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz13_Link">
+    <inertial>
+      <origin
+        xyz="-0.0158452246782004 0.00619313031274138 -5.24698446713323E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00766844548693782" />
+      <inertia
+        ixx="7.70926142561633E-07"
+        ixy="6.47378725305476E-07"
+        ixz="-6.26868773712833E-10"
+        iyy="1.36028636261355E-06"
+        iyz="3.0858883161577E-10"
+        izz="1.6484807866159E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz13_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz13_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz13"
+    type="revolute">
+    <origin
+      xyz="-0.040457 0.011223 0"
+      rpy="0 0 0" />
+    <parent
+      link="fz12_Link" />
+    <child
+      link="fz13_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.169"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz14_Link">
+    <inertial>
+      <origin
+        xyz="6.84221826707798E-06 -0.00329677647235913 -0.0165004874842477"
+        rpy="0 0 0" />
+      <mass
+        value="0.00378673281389061" />
+      <inertia
+        ixx="4.70044970140894E-07"
+        ixy="-9.16610951761662E-13"
+        ixz="9.80771601813381E-11"
+        iyy="4.91875647343619E-07"
+        iyz="-1.26714352849381E-07"
+        izz="1.41742406291919E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz14_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz14_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz14"
+    type="revolute">
+    <origin
+      xyz="-0.036284 0.0268 0"
+      rpy="-0.3665 -1.5708 0" />
+    <parent
+      link="fz13_Link" />
+    <child
+      link="fz14_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz21_Link">
+    <inertial>
+      <origin
+        xyz="-0.0183100214086785 -0.00110403770235035 1.45621593276163E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100639388101722" />
+      <inertia
+        ixx="4.62549859534186E-07"
+        ixy="-1.43110207723793E-07"
+        ixz="2.05628850227063E-10"
+        iyy="2.22041832229495E-06"
+        iyz="7.63349863278686E-11"
+        izz="2.08162821109976E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz21_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz21_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz21"
+    type="revolute">
+    <origin
+      xyz="-0.0035 -0.029833 0.11095"
+      rpy="3.1416 1.4923 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fz21_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.518"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz22_Link">
+    <inertial>
+      <origin
+        xyz="-0.0162663890924856 -0.00032857563536115 7.63729580743888E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358588124079119" />
+      <inertia
+        ixx="1.44429040318132E-07"
+        ixy="1.05993289352036E-07"
+        ixz="-2.72822254662679E-11"
+        iyy="7.23455267802395E-07"
+        iyz="3.04879521204743E-11"
+        izz="7.27926306560542E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz22_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz22_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz22"
+    type="revolute">
+    <origin
+      xyz="-0.0419 -0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fz21_Link" />
+    <child
+      link="fz22_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.623"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz23_Link">
+    <inertial>
+      <origin
+        xyz="5.01939634914121E-06 0.00358041979242141 -0.0177336235160931"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260328499217126" />
+      <inertia
+        ixx="3.22603614487991E-07"
+        ixy="-6.28873843071622E-12"
+        ixz="9.57453494543153E-11"
+        iyy="3.1137947502367E-07"
+        iyz="9.01377966391627E-08"
+        izz="7.26739486599914E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz23_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz23_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz23"
+    type="revolute">
+    <origin
+      xyz="-0.043692 0.011217 0"
+      rpy="1.5708 1.5695 -1.5543" />
+    <parent
+      link="fz22_Link" />
+    <child
+      link="fz23_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz31_Link">
+    <inertial>
+      <origin
+        xyz="-0.0233372043143448 -0.000590478503409209 1.04886742833708E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00829865788114667" />
+      <inertia
+        ixx="3.67197735996417E-07"
+        ixy="-1.18936164176857E-07"
+        ixz="1.55843724157167E-10"
+        iyy="2.3734329678931E-06"
+        iyz="3.77450724437793E-11"
+        izz="2.26081374668809E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz31_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz31_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz31"
+    type="revolute">
+    <origin
+      xyz="-0.0035 -0.009945 0.112"
+      rpy="3.1416 1.5446 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fz31_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz32_Link">
+    <inertial>
+      <origin
+        xyz="-0.016267707795044 -0.000256548647881605 7.09501456184949E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358589458230619" />
+      <inertia
+        ixx="1.45377941149196E-07"
+        ixy="1.08551160226217E-07"
+        ixz="-3.05507403832043E-11"
+        iyy="7.22506767907826E-07"
+        iyz="3.07132553302964E-11"
+        izz="7.27926863638964E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz32_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz32_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz32"
+    type="revolute">
+    <origin
+      xyz="-0.0519 -0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fz31_Link" />
+    <child
+      link="fz32_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.641"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz33_Link">
+    <inertial>
+      <origin
+        xyz="1.37260992284912E-06 0.0035803233705618 -0.0177332743500691"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260331177753113" />
+      <inertia
+        ixx="3.22618051421039E-07"
+        ixy="3.25713153352679E-12"
+        ixz="9.69403513262157E-12"
+        iyy="3.11391716342147E-07"
+        iyz="9.01418764699119E-08"
+        izz="7.26739552705994E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz33_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz33_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz33"
+    type="revolute">
+    <origin
+      xyz="-0.043641 0.01141 0"
+      rpy="1.5708 1.5705 -1.5587" />
+    <parent
+      link="fz32_Link" />
+    <child
+      link="fz33_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz41_Link">
+    <inertial>
+      <origin
+        xyz="-0.0183100239662456 -0.00110404357001215 1.44449168429719E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100639395246075" />
+      <inertia
+        ixx="4.62549923176114E-07"
+        ixy="-1.43110791933657E-07"
+        ixz="2.04440787125584E-10"
+        iyy="2.22041842134978E-06"
+        iyz="7.50863566540316E-11"
+        izz="2.0816291905166E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz41_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz41_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz41"
+    type="revolute">
+    <origin
+      xyz="-0.0035 0.009945 0.11099"
+      rpy="0 1.5446 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fz41_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz42_Link">
+    <inertial>
+      <origin
+        xyz="-0.0162670020037646 -0.000328352735815995 3.07883416161142E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358604216233826" />
+      <inertia
+        ixx="1.44429145926852E-07"
+        ixy="1.06000284346228E-07"
+        ixz="-4.96653342664326E-11"
+        iyy="7.23505035419092E-07"
+        iyz="2.38944350125517E-11"
+        izz="7.2797707549858E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz42_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz42_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz42"
+    type="revolute">
+    <origin
+      xyz="-0.0419 -0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fz41_Link" />
+    <child
+      link="fz42_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.658"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz43_Link">
+    <inertial>
+      <origin
+        xyz="-1.80939820419376E-06 0.0035802583127047 -0.0177330843414484"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260328927031042" />
+      <inertia
+        ixx="3.22619446745819E-07"
+        ixy="5.22933144242645E-12"
+        ixz="-4.37845727909771E-11"
+        iyy="3.11392771355379E-07"
+        iyz="9.01416934497917E-08"
+        izz="7.26723312106009E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz43_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz43_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz43"
+    type="revolute">
+    <origin
+      xyz="-0.043692 0.011217 0"
+      rpy="-1.5708 1.5704 1.5873" />
+    <parent
+      link="fz42_Link" />
+    <child
+      link="fz43_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz51_Link">
+    <inertial>
+      <origin
+        xyz="-0.0158684817906832 -0.00100262396836537 1.32847910480627E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00870573006547253" />
+      <inertia
+        ixx="3.93124077531552E-07"
+        ixy="-1.16969518921071E-07"
+        ixz="1.46116447151274E-10"
+        iyy="1.63160381847551E-06"
+        iyz="5.89909384492466E-11"
+        izz="1.50797999524283E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz51_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz51_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz51"
+    type="revolute">
+    <origin
+      xyz="-0.0035 0.029624 0.10795"
+      rpy="0 1.4923 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fz51_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.545"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz52_Link">
+    <inertial>
+      <origin
+        xyz="-0.0162670718963009 -0.000328217017429799 2.67080852364709E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358606108430071" />
+      <inertia
+        ixx="1.44430667118152E-07"
+        ixy="1.06005742555026E-07"
+        ixz="-5.31901274841338E-11"
+        iyy="7.23506245846155E-07"
+        iyz="2.3839216263499E-11"
+        izz="7.279802802298E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz52_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz52_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz52"
+    type="revolute">
+    <origin
+      xyz="-0.0369 -0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fz51_Link" />
+    <child
+      link="fz52_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.658"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fz53_Link">
+    <inertial>
+      <origin
+        xyz="-5.01630269825887E-06 0.00358024546548252 -0.0177330754396588"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260328329004836" />
+      <inertia
+        ixx="3.22616272404965E-07"
+        ixy="1.35246112705223E-11"
+        ixz="-1.19647172462991E-10"
+        iyy="3.11389657789929E-07"
+        iyz="9.01411448719963E-08"
+        izz="7.26723107121053E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz53_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6z/meshes/fz53_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fz53"
+    type="revolute">
+    <origin
+      xyz="-0.043691 0.011217 0"
+      rpy="-1.5708 1.5695 1.5873" />
+    <parent
+      link="fz52_Link" />
+    <child
+      link="fz53_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

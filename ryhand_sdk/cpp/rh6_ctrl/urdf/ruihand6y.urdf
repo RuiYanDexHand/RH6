@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ruihand6y">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00354104285456125 0.00204598885782099 0.0605396757269698"
+        rpy="0 0 0" />
+      <mass
+        value="0.211569079117232" />
+      <inertia
+        ixx="0.000227960492976313"
+        ixy="2.84392055686079E-07"
+        ixz="5.26461841221454E-06"
+        iyy="0.00014411212671873"
+        iyz="-2.9868718911556E-06"
+        izz="0.000100006031139727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fy11_Link">
+    <inertial>
+      <origin
+        xyz="0.00679002520654505 -1.28183186065556E-07 0.00921783143572007"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122865280263998" />
+      <inertia
+        ixx="7.8328209014543E-07"
+        ixy="9.44825770755344E-12"
+        ixz="1.45349144840083E-07"
+        iyy="1.06364945004909E-06"
+        iyz="-7.07109523425218E-12"
+        izz="1.02116982302802E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy11"
+    type="revolute">
+    <origin
+      xyz="0.0135 0.022 0.0398"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fy11_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="2.356"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy12_Link">
+    <inertial>
+      <origin
+        xyz="0.0171306597723995 0.00371896000224788 -4.99658958874605E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0125497959072737" />
+      <inertia
+        ixx="8.09093809009174E-07"
+        ixy="-5.16426676935394E-07"
+        ixz="2.07629840451354E-10"
+        iyy="2.8318103299697E-06"
+        iyz="-1.04479631329239E-11"
+        izz="2.66845478314068E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy12_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy12_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy12"
+    type="revolute">
+    <origin
+      xyz="0.0105 0 0.0107"
+      rpy="1.5708 0 0" />
+    <parent
+      link="fy11_Link" />
+    <child
+      link="fy12_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.698"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy13_Link">
+    <inertial>
+      <origin
+        xyz="0.015845249321244 0.00619315314516696 5.25376853488524E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00766845638651249" />
+      <inertia
+        ixx="7.70929332520153E-07"
+        ixy="-6.47381862466734E-07"
+        ixz="-6.278147845085E-10"
+        iyy="1.36029006441949E-06"
+        iyz="-3.09433620722497E-10"
+        izz="1.64848714565387E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy13_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy13_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy13"
+    type="revolute">
+    <origin
+      xyz="0.040457 0.011223 0"
+      rpy="0 0 0" />
+    <parent
+      link="fy12_Link" />
+    <child
+      link="fy13_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.169"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy14_Link">
+    <inertial>
+      <origin
+        xyz="6.84221826485754E-06 -0.00329677647236757 -0.0165004874842345"
+        rpy="0 0 0" />
+      <mass
+        value="0.00378673281389124" />
+      <inertia
+        ixx="4.70044970141018E-07"
+        ixy="-9.16610943606549E-13"
+        ixz="9.80771602200776E-11"
+        iyy="4.91875647343776E-07"
+        iyz="-1.26714352849373E-07"
+        izz="1.41742406291917E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy14_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy14_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy14"
+    type="revolute">
+    <origin
+      xyz="0.036284 0.0268 0"
+      rpy="-0.36834 1.5708 0" />
+    <parent
+      link="fy13_Link" />
+    <child
+      link="fy14_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy21_Link">
+    <inertial>
+      <origin
+        xyz="0.0183100453576791 0.00110404248642637 1.4314615770783E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100639225371382" />
+      <inertia
+        ixx="4.62549818532259E-07"
+        ixy="-1.43111709269249E-07"
+        ixz="-2.02961569671992E-10"
+        iyy="2.22041671394316E-06"
+        iyz="-7.34804871357593E-11"
+        izz="2.08162847489449E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy21_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy21_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy21"
+    type="revolute">
+    <origin
+      xyz="-0.0035 0.029833 0.11095"
+      rpy="0 -1.4923 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fy21_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.518"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy22_Link">
+    <inertial>
+      <origin
+        xyz="0.0162670548054254 0.000328335996538476 2.60886696606955E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358605495739092" />
+      <inertia
+        ixx="1.44429039989069E-07"
+        ixy="1.06001497335138E-07"
+        ixz="5.32604155588992E-11"
+        iyy="7.23506313818756E-07"
+        iyz="-2.39237240611277E-11"
+        izz="7.27978897340784E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy22_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy22_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy22"
+    type="revolute">
+    <origin
+      xyz="0.0419 0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fy21_Link" />
+    <child
+      link="fy22_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.623"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy23_Link">
+    <inertial>
+      <origin
+        xyz="-5.03450954461582E-06 0.0035802558028295 -0.0177331035964679"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260327905787072" />
+      <inertia
+        ixx="3.22614347129068E-07"
+        ixy="1.33060728534008E-11"
+        ixz="-1.18853194129732E-10"
+        iyy="3.1138821138318E-07"
+        iyz="9.01404791757268E-08"
+        izz="7.26722620152445E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy23_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy23_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy23"
+    type="revolute">
+    <origin
+      xyz="0.043692 -0.011217 0"
+      rpy="-1.5708 1.5695 -1.5543" />
+    <parent
+      link="fy22_Link" />
+    <child
+      link="fy23_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy31_Link">
+    <inertial>
+      <origin
+        xyz="0.0233371897488126 0.000590481232768836 1.05810883203883E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00829865569529675" />
+      <inertia
+        ixx="3.67197532035121E-07"
+        ixy="-1.18935852306319E-07"
+        ixz="-1.57676508902933E-10"
+        iyy="2.37343189337524E-06"
+        iyz="-3.77701441406405E-11"
+        izz="2.26081333444121E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy31_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy31_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy31"
+    type="revolute">
+    <origin
+      xyz="-0.0035 0.009945 0.112"
+      rpy="0 -1.5446 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fy31_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy32_Link">
+    <inertial>
+      <origin
+        xyz="0.0162682170798479 0.000256347166125992 3.06763353261075E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358603535605245" />
+      <inertia
+        ixx="1.45378610271944E-07"
+        ixy="1.08558752300259E-07"
+        ixz="4.9849784513399E-11"
+        iyy="7.22549183303638E-07"
+        iyz="-2.43260136945764E-11"
+        izz="7.27970697204602E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy32_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy32_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy32"
+    type="revolute">
+    <origin
+      xyz="0.0519 0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fy31_Link" />
+    <child
+      link="fy32_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.641"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy33_Link">
+    <inertial>
+      <origin
+        xyz="-1.39419368525018E-06 0.0035802607719615 -0.0177330927084453"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260328811165374" />
+      <inertia
+        ixx="3.22618883425544E-07"
+        ixy="3.93409844107229E-12"
+        ixz="-3.33398326289438E-11"
+        iyy="3.1139226640071E-07"
+        iyz="9.01415489693662E-08"
+        izz="7.26722969960641E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy33_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy33_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy33"
+    type="revolute">
+    <origin
+      xyz="0.043641 -0.01141 0"
+      rpy="-1.5708 1.5705 -1.5587" />
+    <parent
+      link="fy32_Link" />
+    <child
+      link="fy33_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy41_Link">
+    <inertial>
+      <origin
+        xyz="0.0183100300728871 0.00110404217386961 1.44331117438168E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100639366001575" />
+      <inertia
+        ixx="4.62549940478248E-07"
+        ixy="-1.43110929372667E-07"
+        ixz="-2.04350361871807E-10"
+        iyy="2.22041795607779E-06"
+        iyz="-7.4833604536666E-11"
+        izz="2.08162888617781E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy41_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy41_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy41"
+    type="revolute">
+    <origin
+      xyz="-0.0035 -0.009945 0.11099"
+      rpy="3.1416 -1.5446 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fy41_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.571"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy42_Link">
+    <inertial>
+      <origin
+        xyz="0.0162664773528961 0.000328549470069661 7.07663118645896E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358590544643104" />
+      <inertia
+        ixx="1.44429028630629E-07"
+        ixy="1.05993747396946E-07"
+        ixz="3.0696952809912E-11"
+        iyy="7.23463970805304E-07"
+        iyz="-3.0630296311014E-11"
+        izz="7.2793510267497E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy42_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy42_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy42"
+    type="revolute">
+    <origin
+      xyz="0.0419 0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fy41_Link" />
+    <child
+      link="fy42_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.658"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy43_Link">
+    <inertial>
+      <origin
+        xyz="1.8119656877702E-06 0.00358031778281198 -0.0177332688467031"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260331123444047" />
+      <inertia
+        ixx="3.22618912285256E-07"
+        ixy="2.25533804931156E-12"
+        ixz="1.89822416951554E-11"
+        iyy="3.11392219554833E-07"
+        iyz="9.01422800314552E-08"
+        izz="7.26739626112056E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy43_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy43_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy43"
+    type="revolute">
+    <origin
+      xyz="0.043692 -0.011217 0"
+      rpy="1.5708 1.5704 1.5873" />
+    <parent
+      link="fy42_Link" />
+    <child
+      link="fy43_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy51_Link">
+    <inertial>
+      <origin
+        xyz="0.0158684874364952 0.00100262567201714 1.32109851685991E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00870573306563604" />
+      <inertia
+        ixx="3.93124157202167E-07"
+        ixy="-1.16969683848895E-07"
+        ixz="-1.45438947668994E-10"
+        iyy="1.63160442433223E-06"
+        iyz="-5.82112463619306E-11"
+        izz="1.50798061279593E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy51_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy51_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy51"
+    type="revolute">
+    <origin
+      xyz="-0.0035 -0.029624 0.10795"
+      rpy="3.1416 -1.4923 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fy51_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.545"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy52_Link">
+    <inertial>
+      <origin
+        xyz="0.016266391799061 0.000328448417603933 7.642167395433E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358587967262367" />
+      <inertia
+        ixx="1.44430764836659E-07"
+        ixy="1.05997793149172E-07"
+        ixz="2.74809999522819E-11"
+        iyy="7.23455258661051E-07"
+        iyz="-3.03898403226654E-11"
+        izz="7.27927913373667E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy52_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.658823529411765 0.619607843137255 0.56078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy52_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy52"
+    type="revolute">
+    <origin
+      xyz="0.0369 0.001 0"
+      rpy="0 0 0" />
+    <parent
+      link="fy51_Link" />
+    <child
+      link="fy52_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.658"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="fy53_Link">
+    <inertial>
+      <origin
+        xyz="5.01050953573279E-06 0.0035804146644185 -0.0177336047185497"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260328769879583" />
+      <inertia
+        ixx="3.22604577356363E-07"
+        ixy="-6.35251503937563E-12"
+        ixz="9.59700559637986E-11"
+        iyy="3.11380365618274E-07"
+        iyz="9.01380370887452E-08"
+        izz="7.26739997568638E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy53_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ruihand6y/meshes/fy53_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fy53"
+    type="revolute">
+    <origin
+      xyz="0.043691 -0.011217 0"
+      rpy="1.5708 1.5695 1.5873" />
+    <parent
+      link="fy52_Link" />
+    <child
+      link="fy53_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
