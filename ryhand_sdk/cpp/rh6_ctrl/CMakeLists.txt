@@ -90,7 +90,7 @@ target_link_libraries(rh6_kinematics
   pinocchio::pinocchio
   ament_index_cpp::ament_index_cpp
 )
-ament_target_dependencies(rh6_kinematics rclcpp pinocchio ament_index_cpp geometry_msgs Eigen3 eigen3_cmake_module)
+ament_target_dependencies(rh6_kinematics sensor_msgs rclcpp pinocchio ament_index_cpp geometry_msgs Eigen3 eigen3_cmake_module)
 
 
 
