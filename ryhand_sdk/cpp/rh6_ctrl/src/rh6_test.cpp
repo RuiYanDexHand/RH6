@@ -20,7 +20,7 @@ namespace ruiyan::rh6
         RCLCPP_INFO(this->get_logger(), "hello %s",name.c_str());
 
         rh6cmd = rh6_cmd::msg::Rh6Cmd();
-        rh6cmd.mode = 1;
+        rh6cmd.mode = 0;
         rh6cmd.lr = 0;
         tick = 0;
         tspan_ms = 5;
@@ -55,9 +55,11 @@ namespace ruiyan::rh6
 
     void rh6_test::PubCmd()
     {
-        float p1,p2,p3,p4; // p5,p6,j; 
-        float fs = sin( 2 * M_PI * tick / 4000  );
-        float fc = cos( 2 * M_PI * tick / 4000  );
+        float p1,p2,p3,p4;      // p5,p6,j; 
+        float period = 10000;   // 周期 ms
+        float amplitude = 1500; // 振幅为 1500
+        float fs = sin( 2 * M_PI * tick / period  );
+        float fc = cos( 2 * M_PI * tick / period  );
 
         // 定义主动序列和被动序列
         std::vector<int> active_sequence = {0, 1, 3, 5, 7, 9};
@@ -67,13 +69,23 @@ namespace ruiyan::rh6
         {
             // raw cmd
             case 0:
-                // 生成幅值为4000 的正弦波，周期为4s
+                // 生成幅值为 amplitude 的正弦波，周期为 periods
                 for(int i = 0; i < MOTOR_NUM; i++)
                 {
-                        p1 = 1500 + 1500  * fs;
-                        p2 = fabs( 1000 * fc ) + 500;
-                        rh6cmd.m_pos[i] = p1;
-                        rh6cmd.m_spd[i] = p2;
+                        p1 = amplitude + amplitude  * fs;
+                        p2 = 1000 * 1000 * (amplitude * 4) / 4095 * fc / period + 800;  // 600+
+
+                        if(i<=1)
+                        {
+                            rh6cmd.m_pos[i] = 0;
+                            rh6cmd.m_spd[i] = 1000;
+                        }
+                        else
+                        {
+                            rh6cmd.m_pos[i] = p1;
+                            rh6cmd.m_spd[i] = p2;
+                        }
+
                 }
                 break;
 
